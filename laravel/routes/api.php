@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-//using this
+//using this for route crud (route resource)
 Route::resource('products', ProductController::class);
+Route::get('/products/search/{name}', [ProductController::class, 'search']);
+
 
 //instead doing this
 // Route::get('/products', [ProductController::class, 'index']);
